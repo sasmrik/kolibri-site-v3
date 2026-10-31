@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0138)file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html -->
-<html lang="ru" class="js lenis"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="ru" class="js lenis">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Колибри — Студия декора и праздника | Ачинск</title>
 <meta name="description" content="Студия «Колибри» в Ачинске: гелиевые шары, фотозоны, свадьбы, выписки, выпускные. Дуем шары и создаём воздушные истории. ул. Красноярская, 30.">
@@ -9,10 +9,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 <link rel="preconnect" href="https://images.unsplash.com/" crossorigin="">
-<link href="./index-v2_files/css2" rel="stylesheet">
-<script src="./index-v2_files/gsap.min.js.загрузка" defer=""></script>
-<script src="./index-v2_files/ScrollTrigger.min.js.загрузка" defer=""></script>
-<script src="./index-v2_files/lenis.min.js.загрузка" defer=""></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
 <style>
 :root{
   --bg:#F8FAFD;--bg-subtle:#EFF2F7;--white:#FFFFFF;
@@ -682,17 +682,18 @@ img{display:block;max-width:100%;height:auto}
   .meta-pill{width:100%;justify-content:center}
   .fab{right:16px;bottom:16px;gap:8px}
 }
+  .hero { padding-top: 130px !important; }
 </style>
 </head>
-<body style="" class="has-cursor">
+<body class="has-cursor">
 <div class="loader hide" id="loader" aria-hidden="true">
   <div>
     <div class="loader-mark">Коли<em>бри</em></div>
     <div class="loader-bar"><i></i></div>
   </div>
 </div>
-<div class="cursor-dot" id="cDot" style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1160px, 417px);"></div>
-<div class="cursor-ring" id="cRing" style="translate: none; rotate: none; scale: none; transform: translate(-50%, -50%) translate(1160px, 417px);"></div>
+<div class="cursor-dot" id="cDot"></div>
+<div class="cursor-ring" id="cRing"></div>
 <div class="ambient" aria-hidden="true">
   <div class="blob a"></div>
   <div class="blob b"></div>
@@ -702,12 +703,12 @@ img{display:block;max-width:100%;height:auto}
 <div class="page">
 <header class="header" id="header">
   <div class="container header-inner">
-    <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#hero" class="logo">КОЛИБРИ <em>Студия декора и праздника</em></a>
+    <a href="#hero" class="logo">КОЛИБРИ <em>Студия декора и праздника</em></a>
     <nav class="nav-desk" aria-label="Меню">
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#categories">Категории</a>
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#catalog">Каталог</a>
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#order">Заявка</a>
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#contacts">Контакты</a>
+      <a href="#categories">Категории</a>
+      <a href="#catalog">Каталог</a>
+      <a href="#order">Заявка</a>
+      <a href="#contacts">Контакты</a>
     </nav>
     <div class="actions">
       <button class="icon-btn burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
@@ -718,24 +719,24 @@ img{display:block;max-width:100%;height:auto}
       <button class="icon-btn" id="openCallback" aria-label="Заказать звонок">
         <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.5-1.1a2 2 0 012.1-.4c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"></path></svg>
       </button>
-      <a class="btn btn-primary btn-sm magnetic" href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#order" id="hdrCta" style="display: inline-flex;">Заявка</a>
+      <a class="btn btn-primary btn-sm magnetic" href="#order" id="hdrCta" style="display: inline-flex;">Заявка</a>
     </div>
   </div>
 </header>
 
 <div class="overlay" id="navOv"></div>
 <nav class="drawer-left" id="navDrawer" data-lenis-prevent="">
-  <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#categories" data-close-nav="">Категории</a>
-  <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#catalog" data-close-nav="">Каталог</a>
-  <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#calc" data-close-nav="">Калькулятор</a>
-  <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#order" data-close-nav="">Онлайн-заявка</a>
-  <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#reviews" data-close-nav="">Отзывы</a>
-  <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#contacts" data-close-nav="">Контакты</a>
+  <a href="#categories" data-close-nav="">Категории</a>
+  <a href="#catalog" data-close-nav="">Каталог</a>
+  <a href="#calc" data-close-nav="">Калькулятор</a>
+  <a href="#order" data-close-nav="">Онлайн-заявка</a>
+  <a href="#reviews" data-close-nav="">Отзывы</a>
+  <a href="#contacts" data-close-nav="">Контакты</a>
   <p style="margin-top:28px;color:var(--soft);font-size:14px;line-height:1.8">г. Ачинск, ул. Красноярская, 30, офис 8<br><a href="tel:+79676179721" style="color:var(--marsala);font-weight:700">+7 (967) 617-97-21</a></p>
 </nav>
 
 <section class="hero" id="hero">
-  <div class="hero-bg-media" id="heroMedia" aria-hidden="true" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+  <div class="hero-bg-media" id="heroMedia" aria-hidden="true">
     <div class="hero-bg-overlay"></div>
   </div>
   <div class="container hero-content">
@@ -743,8 +744,8 @@ img{display:block;max-width:100%;height:auto}
     <h1>СОЗДАЕМ<br><em>ЭМОЦИИ</em></h1>
     <p class="hero-sub">Дуем шары и создаём воздушные истории. Фотозоны, свадьбы, выписки, выпускные и композиции — с душой и доставкой по Ачинску.</p>
     <div class="hero-row">
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#catalog" class="btn btn-primary magnetic">Смотреть каталог</a>
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#order" class="btn btn-ghost magnetic">Оставить заявку</a>
+      <a href="#catalog" class="btn btn-primary magnetic">Смотреть каталог</a>
+      <a href="#order" class="btn btn-ghost magnetic">Оставить заявку</a>
     </div>
     <div class="hero-meta">
       <div class="meta-pill"><span class="meta-star">★</span> <strong>5.0</strong> на Яндекс Картах</div>
@@ -771,39 +772,39 @@ img{display:block;max-width:100%;height:auto}
   <div class="container">
     <div class="section-head">
       <div>
-        <p class="sec-eye reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Категории как в нашей VK</p>
-        <h2 class="sec-title reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Всё для<br><em>вашего праздника</em></h2>
+        <p class="sec-eye reveal">Категории как в нашей VK</p>
+        <h2 class="sec-title reveal">Всё для<br><em>вашего праздника</em></h2>
       </div>
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#catalog" class="btn btn-ghost btn-sm reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Весь каталог</a>
+      <a href="#catalog" class="btn btn-ghost btn-sm reveal">Весь каталог</a>
     </div>
     <div class="bento">
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#catalog" class="bento-card b1 tilt-card" data-filter="latex">
-        <img src="./index-v2_files/shary.jpg" alt="Латексные и гелиевые шары" loading="lazy" width="1000" height="1200" onerror="this.remove()">
+      <a href="#catalog" class="bento-card b1 tilt-card" data-filter="latex">
+        <img src="shary.jpg" alt="Латексные и гелиевые шары" loading="lazy" width="1000" height="1200" onerror="this.remove()">
         <div class="shade"></div>
         <div class="bento-body"><h3>Гелиевые и латексные шары</h3><span class="pill">Смотреть каталог →</span></div>
       </a>
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#catalog" class="bento-card b2 tilt-card" data-filter="latex" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
-        <img src="./index-v2_files/cifra.jpg" alt="Фольгированные шары и цифры" loading="lazy" width="1200" height="800" onerror="this.remove()">
+      <a href="#catalog" class="bento-card b2 tilt-card" data-filter="latex">
+        <img src="cifra.jpg" alt="Фольгированные шары и цифры" loading="lazy" width="1200" height="800" onerror="this.remove()">
         <div class="shade"></div>
         <div class="bento-body"><h3>Фольгированные шары и цифры</h3><span class="pill">Смотреть каталог →</span></div>
       </a>
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#catalog" class="bento-card b3 tilt-card" data-filter="latex" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
-        <img src="./index-v2_files/cifra.jpg" alt="Каркасные цифры с подсветкой" loading="lazy" width="900" height="1200" onerror="this.remove()">
+      <a href="#catalog" class="bento-card b3 tilt-card" data-filter="latex">
+        <img src="cifra.jpg" alt="Каркасные цифры с подсветкой" loading="lazy" width="900" height="1200" onerror="this.remove()">
         <div class="shade"></div>
         <div class="bento-body"><h3>Каркасные цифры с подсветкой</h3><span class="pill">Смотреть каталог →</span></div>
       </a>
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#catalog" class="bento-card b4 tilt-card" data-filter="event">
-        <img src="./index-v2_files/wings.jpg" alt="Фотозоны" loading="lazy" width="800" height="800" onerror="this.remove()">
+      <a href="#catalog" class="bento-card b4 tilt-card" data-filter="event">
+        <img src="wings.jpg" alt="Фотозоны" loading="lazy" width="800" height="800" onerror="this.remove()">
         <div class="shade"></div>
         <div class="bento-body"><h3>Фотозоны</h3><span class="pill">Смотреть →</span></div>
       </a>
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#catalog" class="bento-card b5 tilt-card" data-filter="event">
-        <img src="./index-v2_files/hero.jpg" alt="Свадебный декор" loading="lazy" width="1000" height="700" onerror="this.remove()">
+      <a href="#catalog" class="bento-card b5 tilt-card" data-filter="event">
+        <img src="hero.jpg" alt="Свадебный декор" loading="lazy" width="1000" height="700" onerror="this.remove()">
         <div class="shade"></div>
         <div class="bento-body"><h3>Свадебный декор</h3><span class="pill">Смотреть →</span></div>
       </a>
-      <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#catalog" class="bento-card b6 tilt-card" data-filter="event" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
-        <img src="./index-v2_files/vypusk.jpg" alt="Выписка и годик" loading="lazy" width="1200" height="800" onerror="this.remove()">
+      <a href="#catalog" class="bento-card b6 tilt-card" data-filter="event">
+        <img src="vypusk.jpg" alt="Выписка и годик" loading="lazy" width="1200" height="800" onerror="this.remove()">
         <div class="shade"></div>
         <div class="bento-body"><h3>Выписка и годик</h3><span class="pill">Смотреть каталог →</span></div>
       </a>
@@ -815,15 +816,15 @@ img{display:block;max-width:100%;height:auto}
   <div class="container">
     <div class="section-head" style="justify-content:center;text-align:center">
       <div>
-        <p class="sec-eye reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Почему Колибри</p>
-        <h2 class="sec-title reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Пусть каждый день<br><em>будет особенным</em></h2>
+        <p class="sec-eye reveal">Почему Колибри</p>
+        <h2 class="sec-title reveal">Пусть каждый день<br><em>будет особенным</em></h2>
       </div>
     </div>
     <div class="bgrid">
-      <article class="bcard reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><div class="bico"><svg viewBox="0 0 24 24"><path d="M12 3l2.2 4.5L19 8.2l-3.5 3.4.8 4.9L12 14.3 7.7 16.5l.8-4.9L5 8.2l4.8-.7L12 3z"></path></svg></div><h3>Только наши работы</h3><p>В портфолио — реальные заказы из Ачинска: выписки, годики, свадьбы и выпускные.</p></article>
-      <article class="bcard reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><div class="bico"><svg viewBox="0 0 24 24"><path d="M20.8 5.6a4.5 4.5 0 00-6.4 0L12 8l-2.4-2.4a4.5 4.5 0 00-6.4 6.4l2.4 2.4L12 21l6.4-6.4 2.4-2.4a4.5 4.5 0 000-6.4z"></path></svg></div><h3>Вкладываем волшебство</h3><p>Супер-эффектная аэромозаика, каркасные цифры с лампочками и фотозона мечты.</p></article>
-      <article class="bcard reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><div class="bico"><svg viewBox="0 0 24 24"><path d="M3 7h13l5 5v5a2 2 0 01-2 2H3z"></path><circle cx="7.5" cy="17.5" r="1.5"></circle><circle cx="16.5" cy="17.5" r="1.5"></circle></svg></div><h3>Доставка вовремя</h3><p>Привезём к празднику аккуратно и в срок — гости и дети будут в восторге.</p></article>
-      <article class="bcard reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><div class="bico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path><path d="M6 15h4"></path></svg></div><h3>Удобная оплата</h3><p>Наличные, карта, перевод, СБП. Подскажем бюджет и соберём вариант под вас.</p></article>
+      <article class="bcard reveal"><div class="bico"><svg viewBox="0 0 24 24"><path d="M12 3l2.2 4.5L19 8.2l-3.5 3.4.8 4.9L12 14.3 7.7 16.5l.8-4.9L5 8.2l4.8-.7L12 3z"></path></svg></div><h3>Только наши работы</h3><p>В портфолио — реальные заказы из Ачинска: выписки, годики, свадьбы и выпускные.</p></article>
+      <article class="bcard reveal"><div class="bico"><svg viewBox="0 0 24 24"><path d="M20.8 5.6a4.5 4.5 0 00-6.4 0L12 8l-2.4-2.4a4.5 4.5 0 00-6.4 6.4l2.4 2.4L12 21l6.4-6.4 2.4-2.4a4.5 4.5 0 000-6.4z"></path></svg></div><h3>Вкладываем волшебство</h3><p>Супер-эффектная аэромозаика, каркасные цифры с лампочками и фотозона мечты.</p></article>
+      <article class="bcard reveal"><div class="bico"><svg viewBox="0 0 24 24"><path d="M3 7h13l5 5v5a2 2 0 01-2 2H3z"></path><circle cx="7.5" cy="17.5" r="1.5"></circle><circle cx="16.5" cy="17.5" r="1.5"></circle></svg></div><h3>Доставка вовремя</h3><p>Привезём к празднику аккуратно и в срок — гости и дети будут в восторге.</p></article>
+      <article class="bcard reveal"><div class="bico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path><path d="M6 15h4"></path></svg></div><h3>Удобная оплата</h3><p>Наличные, карта, перевод, СБП. Подскажем бюджет и соберём вариант под вас.</p></article>
     </div>
   </div>
 </section>
@@ -832,23 +833,23 @@ img{display:block;max-width:100%;height:auto}
   <div class="container">
     <div class="section-head">
       <div>
-        <p class="sec-eye reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Каталог</p>
-        <h2 class="sec-title reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Популярные<br><em>позиции</em></h2>
+        <p class="sec-eye reveal">Каталог</p>
+        <h2 class="sec-title reveal">Популярные<br><em>позиции</em></h2>
       </div>
     </div>
-    <div class="filters reveal in" id="filters" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+    <div class="filters reveal" id="filters">
       <button type="button" class="fchip active" data-cat="all" aria-label="Все">Все</button>
       <button type="button" class="fchip" data-cat="latex" aria-label="Воздушные шары">Воздушные шары</button>
       <button type="button" class="fchip" data-cat="event" aria-label="Фотозоны и праздники">Фотозоны и праздники</button>
     </div>
-    <div class="products" id="products"><article class="pcard tilt-card" data-name="Связка гелиевых шаров"><div class="pmedia"><span class="pbadge">Хит</span><img src="./index-v2_files/photo-1530103862676-de8c9debad1d" alt="Связка гелиевых шаров" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Связка гелиевых шаров</h3><div class="pbot"><div class="price">990 ₽</div><button type="button" class="add" data-add="p1" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article><article class="pcard tilt-card" data-name="Шар 12&quot; латекс (шт.)"><div class="pmedia"><img src="./index-v2_files/photo-1513201099705-a9746e1e201f" alt="Шар 12&quot; латекс (шт.)" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Шар 12" латекс (шт.)</h3><div class="pbot"><div class="price">45 ₽</div><button type="button" class="add" data-add="p2" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article><article class="pcard tilt-card" data-name="Фольгированное сердце" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"><div class="pmedia"><span class="pbadge">New</span><img src="./index-v2_files/pexels-photo-1729808.jpg" alt="Фольгированное сердце" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Фольгированное сердце</h3><div class="pbot"><div class="price">350 ₽</div><button type="button" class="add" data-add="p3" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article><article class="pcard tilt-card" data-name="Фольгированная цифра"><div class="pmedia"><span class="pbadge">Хит</span><img src="./index-v2_files/pexels-photo-3014856.jpg" alt="Фольгированная цифра" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Фольгированная цифра</h3><div class="pbot"><div class="price">1&nbsp;200 ₽</div><button type="button" class="add" data-add="p4" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article><article class="pcard tilt-card" data-name="Фотозона «Нежность»"><div class="pmedia"><span class="pbadge">Premium</span><img src="./index-v2_files/wings.jpg" alt="Фотозона «Нежность»" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Фотозона «Нежность»</h3><div class="pbot"><div class="price">12&nbsp;000 ₽</div><button type="button" class="add" data-add="p5" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article><article class="pcard tilt-card" data-name="Напольная композиция" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"><div class="pmedia"><img src="./index-v2_files/photo-1511795409834-ef04bbd61622" alt="Напольная композиция" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Напольная композиция</h3><div class="pbot"><div class="price">3&nbsp;200 ₽</div><button type="button" class="add" data-add="p6" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article><article class="pcard tilt-card" data-name="Выписка / сет для малыша"><div class="pmedia"><span class="pbadge">Топ</span><img src="./index-v2_files/vypusk.jpg" alt="Выписка / сет для малыша" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Выписка / сет для малыша</h3><div class="pbot"><div class="price">4&nbsp;500 ₽</div><button type="button" class="add" data-add="p7" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article><article class="pcard tilt-card" data-name="Оформление годика"><div class="pmedia"><img src="./index-v2_files/photo-1530103862676-de8c9debad1d" alt="Оформление годика" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Оформление годика</h3><div class="pbot"><div class="price">7&nbsp;800 ₽</div><button type="button" class="add" data-add="p8" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article><article class="pcard tilt-card" data-name="Коробка-сюрприз"><div class="pmedia"><span class="pbadge">Топ</span><img src="./index-v2_files/pexels-photo-1303081.jpg" alt="Коробка-сюрприз" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Коробка-сюрприз</h3><div class="pbot"><div class="price">4&nbsp;500 ₽</div><button type="button" class="add" data-add="p9" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article><article class="pcard tilt-card" data-name="Каркасная цифра с подсветкой" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"><div class="pmedia"><span class="pbadge">Аренда</span><img src="./index-v2_files/photo-1492684223066-81342ee5ff30" alt="Каркасная цифра с подсветкой" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Каркасная цифра с подсветкой</h3><div class="pbot"><div class="price">3&nbsp;500 ₽</div><button type="button" class="add" data-add="p10" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article><article class="pcard tilt-card" data-name="Свадебная арка" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"><div class="pmedia"><span class="pbadge">Premium</span><img src="./index-v2_files/hero.jpg" alt="Свадебная арка" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Свадебная арка</h3><div class="pbot"><div class="price">18&nbsp;000 ₽</div><button type="button" class="add" data-add="p11" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article><article class="pcard tilt-card" data-name="Президиум молодожёнов"><div class="pmedia"><img src="./index-v2_files/photo-1519225421980-715cb0215aed" alt="Президиум молодожёнов" loading="lazy" width="700" height="735" onerror="this.style.opacity=0"></div><div class="pinfo"><h3>Президиум молодожёнов</h3><div class="pbot"><div class="price">15&nbsp;000 ₽</div><button type="button" class="add" data-add="p12" aria-label="В корзину"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></button></div></div></article></div>
+    <div class="products" id="products"></div>
     <div class="load-more-wrapper"><button type="button" class="load-more hidden" id="loadMore" aria-label="Показать ещё товары">Показать ещё</button></div>
   </div>
 </section>
 
 <section class="section" id="calc">
   <div class="container split">
-    <div class="panel reveal in" id="calcPanel" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+    <div class="panel reveal" id="calcPanel">
       <p class="sec-eye">Калькулятор</p>
       <h2>Соберите<br><em>свой праздник</em></h2>
       <p>Ориентировочная стоимость. Точную смету подтвердим в переписке — без оплаты на сайте.</p>
@@ -865,11 +866,11 @@ img{display:block;max-width:100%;height:auto}
         <button type="button" class="chip" data-val="8000" data-name="Фотозона" aria-label="Фотозона">Фотозона</button>
         <button type="button" class="chip" data-val="15000" data-name="Зал / президиум" aria-label="Зал / президиум">Зал / президиум</button>
       </div>
-      <div class="total"><span>Ориентир</span><strong id="calcSum">7&nbsp;000 ₽</strong></div>
+      <div class="total"><span>Ориентир</span><strong id="calcSum">7 000 ₽</strong></div>
       <button type="button" class="btn btn-primary btn-full magnetic" id="addCalc" aria-label="Добавить расчёт в корзину">Добавить расчёт в корзину</button>
     </div>
 
-    <div class="panel reveal in" id="order" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+    <div class="panel reveal" id="order">
       <p class="sec-eye">Онлайн-заявка</p>
       <h2>Свяжитесь<br><em>с нами</em></h2>
       <p>Оставьте заявку — ответим в WhatsApp и поможем собрать идеальный декор.</p>
@@ -900,15 +901,15 @@ img{display:block;max-width:100%;height:auto}
   <div class="container">
     <div class="section-head">
       <div>
-        <p class="sec-eye reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Отзывы · 5.0</p>
-        <h2 class="sec-title reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Нас выбирают<br><em>снова и снова</em></h2>
+        <p class="sec-eye reveal">Отзывы · 5.0</p>
+        <h2 class="sec-title reveal">Нас выбирают<br><em>снова и снова</em></h2>
       </div>
-      <button class="btn btn-primary btn-sm reveal in" id="openReviewBtn" aria-label="Оставить отзыв" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Оставить отзыв</button>
+      <button class="btn btn-primary btn-sm reveal" id="openReviewBtn" aria-label="Оставить отзыв">Оставить отзыв</button>
     </div>
     <div class="reviews" id="reviewsList">
-      <article class="rev reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><div class="stars">★★★★★</div><p>«Заказывали фотозону на 1 день рождения. Всё подробно объяснили, доставили вовремя до квартиры. Отнеслись с душой — только положительные впечатления!»</p><b>Гость с Яндекс Карт</b><span>Ачинск</span></article>
-      <article class="rev reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><div class="stars">★★★★★</div><p>«С выписки племянницы все мероприятия только через любимых Колибри. Когда встал вопрос о свадьбе — сомнений не было. Шары летают долго, размеры радуют!»</p><b>Таисия В.</b><span>Постоянный клиент</span></article>
-      <article class="rev reveal in" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><div class="stars">★★★★★</div><p>«Оформление свадьбы и юбилея на высшем уровне. Девочки круглосуточно на связи, чуткие и отзывчивые. Фотозона — просто бомба!»</p><b>Прус Наталья</b><span>Яндекс Карты</span></article>
+      <article class="rev reveal"><div class="stars">★★★★★</div><p>«Заказывали фотозону на 1 день рождения. Всё подробно объяснили, доставили вовремя до квартиры. Отнеслись с душой — только положительные впечатления!»</p><b>Гость с Яндекс Карт</b><span>Ачинск</span></article>
+      <article class="rev reveal"><div class="stars">★★★★★</div><p>«С выписки племянницы все мероприятия только через любимых Колибри. Когда встал вопрос о свадьбе — сомнений не было. Шары летают долго, размеры радуют!»</p><b>Таисия В.</b><span>Постоянный клиент</span></article>
+      <article class="rev reveal"><div class="stars">★★★★★</div><p>«Оформление свадьбы и юбилея на высшем уровне. Девочки круглосуточно на связи, чуткие и отзывчивые. Фотозона — просто бомба!»</p><b>Прус Наталья</b><span>Яндекс Карты</span></article>
     </div>
   </div>
 </section>
@@ -928,10 +929,10 @@ img{display:block;max-width:100%;height:auto}
       </div>
       <div class="flink">
         <h4>Навигация</h4>
-        <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#categories">Категории</a>
-        <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#catalog">Каталог</a>
-        <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#order">Онлайн-заявка</a>
-        <a href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#reviews">Отзывы</a>
+        <a href="#categories">Категории</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#order">Онлайн-заявка</a>
+        <a href="#reviews">Отзывы</a>
       </div>
       <div class="fcontacts">
         <h4>Контакты</h4>
@@ -959,9 +960,9 @@ img{display:block;max-width:100%;height:auto}
 <div class="cart-ov" id="cartOv"></div>
 <aside class="cart" id="cart" aria-label="Корзина" data-lenis-prevent="">
   <div class="cart-h"><h3>Корзина</h3><button class="icon-btn" id="closeCart" aria-label="Закрыть">✕</button></div>
-  <div class="cart-items" id="cartItems"><div class="citem"><div class="cimg"><img src="./index-v2_files/photo-1530103862676-de8c9debad1d" alt="" loading="lazy"></div><div class="cinfo"><h4>Связка гелиевых шаров</h4><p>3&nbsp;960 ₽</p></div><div class="qty"><button type="button" class="qbtn" onclick="changeQty(0,-1)" aria-label="Меньше">−</button><span>4</span><button type="button" class="qbtn" onclick="changeQty(0,1)" aria-label="Больше">+</button></div></div><div class="citem"><div class="cimg"><img src="./index-v2_files/photo-1513151233558-d860c5398176" alt="" loading="lazy"></div><div class="cinfo"><h4>Шар 12" латекс (шт.)</h4><p>225 ₽</p></div><div class="qty"><button type="button" class="qbtn" onclick="changeQty(1,-1)" aria-label="Меньше">−</button><span>5</span><button type="button" class="qbtn" onclick="changeQty(1,1)" aria-label="Больше">+</button></div></div><div class="citem"><div class="cimg"><img src="./index-v2_files/photo-1515488042361-ee00e0ddd4e4" alt="" loading="lazy"></div><div class="cinfo"><h4>Выписка / сет для малыша</h4><p>4&nbsp;500 ₽</p></div><div class="qty"><button type="button" class="qbtn" onclick="changeQty(2,-1)" aria-label="Меньше">−</button><span>1</span><button type="button" class="qbtn" onclick="changeQty(2,1)" aria-label="Больше">+</button></div></div><div class="citem"><div class="cimg"><div style="width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(135deg,#E8C4C4,#F3D7D7);font-size:18px">✦</div></div><div class="cinfo"><h4>Расчёт: Выписка + Шары</h4><p>7&nbsp;000 ₽</p></div><div class="qty"><button type="button" class="qbtn" onclick="changeQty(3,-1)" aria-label="Меньше">−</button><span>1</span><button type="button" class="qbtn" onclick="changeQty(3,1)" aria-label="Больше">+</button></div></div></div>
+  <div class="cart-items" id="cartItems"></div>
   <div class="cart-f">
-    <div class="csum"><span>Итого</span><strong id="cartTotal">15&nbsp;685 ₽</strong></div>
+    <div class="csum"><span>Итого</span><strong id="cartTotal">0 ₽</strong></div>
     <button type="button" class="btn btn-gold btn-full magnetic" id="checkoutBtn" aria-label="Связаться по заказу">Связаться по заказу</button>
     <p class="form-note" style="text-align:center;margin-top:10px">Откроем выбор мессенджера. Оплата — после согласования.</p>
   </div>
@@ -973,19 +974,19 @@ img{display:block;max-width:100%;height:auto}
   <h3>Куда отправить заказ?</h3>
   <p>Выберите удобный мессенджер для связи</p>
   <div class="messenger-grid">
-    <a class="messenger-btn whatsapp" id="sendWa" href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#" target="_blank" rel="noopener">
+    <a class="messenger-btn whatsapp" id="sendWa" href="#" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-.1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a7.4 7.4 0 01-2.2-1.4 8.2 8.2 0 01-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.2-.4c.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.5a1.1 1.1 0 00-.8.4 2.6 2.6 0 00-.8 2c0 1.2.9 2.4 1 2.5.2.3 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6a4 4 0 001.9.1c.6-.1 1.8-.7 2-1.4s.2-1.3.1-1.4-.2-.2-.5-.3zM12.1 21.2h0a9.2 9.2 0 01-4.7-1.3l-.3-.2-3.5.9.9-3.4-.2-.3a9.2 9.2 0 01-1.4-4.9 9.3 9.3 0 0115.8-6.5 9.2 9.2 0 012.7 6.5 9.3 9.3 0 01-9.3 9.2zm7.9-17a11.1 11.1 0 00-17.9 13.2L1 23l6.1-1.6a11.1 11.1 0 0016.8-9.4 11 11 0 00-3.3-7.9z"></path></svg>
       <span>WhatsApp</span>
     </a>
-    <a class="messenger-btn telegram" id="sendTg" href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#" target="_blank" rel="noopener">
+    <a class="messenger-btn telegram" id="sendTg" href="#" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg>
       <span>Telegram</span>
     </a>
-    <a class="messenger-btn vk" id="sendVk" href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#" target="_blank" rel="noopener">
+    <a class="messenger-btn vk" id="sendVk" href="#" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.44c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.332-3.202C4.624 10.857 4 8.164 4 7.723c0-.237.102-.458.593-.458h1.744c.44 0 .61.203.78.678.863 2.49 2.3 4.675 2.895 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.372 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.403 2.151-3.572 2.151-3.572.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.35 4.031-2.35 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.471 2.05.17.49-.085.744-.576.744z"></path></svg>
       <span>VKontakte</span>
     </a>
-    <a class="messenger-btn max" id="sendMax" href="file:///C:/Users/tereb/OneDrive/Desktop/%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%B8%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/index.html#" target="_blank" rel="noopener">
+    <a class="messenger-btn max" id="sendMax" href="#" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
       <span>MAX</span>
     </a>
@@ -1043,18 +1044,18 @@ document.addEventListener('DOMContentLoaded', function () {
   var PRODUCTS = [];
 
   var FALLBACK_PRODUCTS = [
-    { id:'p1', name:'Связка гелиевых шаров', price:990, cat:'latex', badge:'Хит', img:'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=700&q=70' },
-    { id:'p2', name:'Шар 12" латекс (шт.)', price:45, cat:'latex', badge:'', img:'https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=700&q=70' },
-    { id:'p3', name:'Фольгированное сердце', price:350, cat:'latex', badge:'New', img:'https://images.pexels.com/photos/1729808/pexels-photo-1729808.jpeg?auto=compress&cs=tinysrgb&w=600' },
-    { id:'p4', name:'Фольгированная цифра', price:1200, cat:'latex', badge:'Хит', img:'https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg?auto=compress&cs=tinysrgb&w=600' },
+    { id:'p1', name:'Связка гелиевых шаров', price:990, cat:'latex', badge:'Хит', img:'shary.jpg' },
+    { id:'p2', name:'Шар 12" латекс (шт.)', price:45, cat:'latex', badge:'', img:'shary.jpg' },
+    { id:'p3', name:'Фольгированное сердце', price:350, cat:'latex', badge:'New', img:'cifra.jpg' },
+    { id:'p4', name:'Фольгированная цифра', price:1200, cat:'latex', badge:'Хит', img:'cifra.jpg' },
     { id:'p5', name:'Фотозона «Нежность»', price:12000, cat:'event', badge:'Premium', img:'wings.jpg' },
-    { id:'p6', name:'Напольная композиция', price:3200, cat:'event', badge:'', img:'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=700&q=70' },
+    { id:'p6', name:'Напольная композиция', price:3200, cat:'event', badge:'', img:'party.jpg' },
     { id:'p7', name:'Выписка / сет для малыша', price:4500, cat:'event', badge:'Топ', img:'vypusk.jpg' },
-    { id:'p8', name:'Оформление годика', price:7800, cat:'event', badge:'', img:'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=700&q=70' },
-    { id:'p9', name:'Коробка-сюрприз', price:4500, cat:'event', badge:'Топ', img:'https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=600' },
-    { id:'p10', name:'Каркасная цифра с подсветкой', price:3500, cat:'event', badge:'Аренда', img:'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=700&q=70' },
+    { id:'p8', name:'Оформление годика', price:7800, cat:'event', badge:'', img:'party.jpg' },
+    { id:'p9', name:'Коробка-сюрприз', price:4500, cat:'event', badge:'Топ', img:'cifra.jpg' },
+    { id:'p10', name:'Каркасная цифра с подсветкой', price:3500, cat:'event', badge:'Аренда', img:'cifra.jpg' },
     { id:'p11', name:'Свадебная арка', price:18000, cat:'event', badge:'Premium', img:'hero.jpg' },
-    { id:'p12', name:'Президиум молодожёнов', price:15000, cat:'event', badge:'', img:'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=70' }
+    { id:'p12', name:'Президиум молодожёнов', price:15000, cat:'event', badge:'', img:'hero.jpg' }
   ];
 
   var KEY_CART = 'kolibri_cart_v3';
@@ -1519,7 +1520,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('load', function () {
     var loader = document.getElementById('loader');
-    setTimeout(function () { loader.classList.add('hide'); }, reduced ? 50 : 450);
+    setTimeout(function () { loader.classList.hide = 'hide'; }, reduced ? 50 : 450);
     setTimeout(function() {
       if (hasST) ScrollTrigger.refresh();
     }, 600);
